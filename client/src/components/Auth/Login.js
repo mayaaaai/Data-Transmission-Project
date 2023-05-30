@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import '../../styles/Login.css';
 
 
+
 function Body() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -50,13 +51,13 @@ function Body() {
                 {/* Email input */}
                 <div className="form-outline mb-4">
                     <input type="email" id="emailAddress" className="form-control" onChange={handleEmailChange} />
-                    <label className="form-label text-white" htmlFor="form2Example1">
+                    <label className="form-label text-black" htmlFor="form2Example1">
                         Email address
                     </label>
                 </div>
 
                 {/* Password input */}
-                <div className="form-outline mb-4 text-white">
+                <div className="form-outline mb-4 text-black">
                     <input type="password" id="password" className="form-control" onChange={handlePasswordChange} />
                     <label className="form-label" htmlFor="form2Example2">
                         Password
@@ -75,9 +76,9 @@ function Body() {
                 </div>
 
                 {/* Register buttons */}
-                <div className="text-center text-white">
+                <div className="text-center text-black">
                     <p>
-                        Not a member? <a href="#!">Register</a>
+                        Not a member? <a href="/register">Register</a>
                     </p>
                 </div>
             </form>
@@ -88,9 +89,9 @@ function Body() {
 function Home() {
     return (
         <>
-            {/* <Layout> */}
+             
             <Body />
-            {/* </Layout> */}
+            
         </>
     );
 }

@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Cart from './pages/Cart';
 import Login from './components/Auth/Login';
+import Register from './components/Auth/Register';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         <Route path="/" element={<PublicRoute> <Home /> </PublicRoute>} />
         <Route path="/menu" element={<PublicRoute> <Menu /> </PublicRoute>} />
         <Route path="/cart" element={<PrivateRoute> <Cart /> </PrivateRoute>} />
-        <Route path="../login" element={<PublicRoute> <Login /> </PublicRoute>} />
+        <Route path="/login" element={<PublicRoute> <Login /> </PublicRoute>} />
+        <Route path="/register" element={<PublicRoute> <Register /> </PublicRoute>} />
       </Routes>
     </>
   );
