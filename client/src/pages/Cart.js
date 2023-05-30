@@ -25,13 +25,13 @@ function Body({ items = [] }) {
       body: JSON.stringify({ email: email }),
     });
 
-    // Show the success message
+   
     alert("You successfully completed the order");
 
-    // Reload the page or perform any other necessary actions
     window.location.reload();
   }
 
+  
   return (
     <div className="container">
       <table className="table">
@@ -41,7 +41,7 @@ function Body({ items = [] }) {
             <th scope="col" className="th-text">Image</th>
             <th scope="col" className="th-text">Item</th>
             <th scope="col" className="th-text">Price</th>
-            {/* <th scope="col" className="th-text">Quantity</th> */}
+            <th scope="col" className="th-text">Quantity</th> 
             <th scope="col" className="th-text"></th>
           </tr>
         </thead>
@@ -53,7 +53,7 @@ function Body({ items = [] }) {
               <td className="td-img"><img src={item.image} className="card-img-top" alt="..." /></td>
               <td className="td-text">{item.title}</td>
               <td className="td-text">{item.price}</td>
-              {/* <td className="td-text">{item.qty}</td> */}
+              <td className="td-text">{item.quantity}</td>
               <td className="td-text"><button id={item._id} className="btn btn-danger" onClick={deleteRecord}>Remove</button></td>
             </tr>
           ))}

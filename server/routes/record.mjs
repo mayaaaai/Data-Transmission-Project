@@ -95,18 +95,27 @@ router.post("/", async (req, res) => {
         // If it is not in the cart, add it to the cart.
         collection = await db.collection("cart");
         let found = await db.collection("cart").findOne({email:email, item: id });
+        
         if (!found) {
             const newRecord = {
                 email: email,
-                item: id
+                item: id,
+                quantity: 1
             };
+        
             let result = await collection.insertOne(newRecord);
             console.log("➕ " + req.body.title + " added to cart!")
             res.send(result).status(204);
         }
         else {
-            console.log("❌ " + req.body.title + " is already in the cart!")
-            res.send("Already in cart").status(204);
+            const updateRecord={
+                $inc: {quantity: 1}
+            }
+            let result = await collection.updateOne({email:email, item: id }, updateRecord);
+
+
+            console.log("➕ " + req.body.title + " added to cart!")
+            res.send("Quantity updated!").status(204);
         }
     }
 });

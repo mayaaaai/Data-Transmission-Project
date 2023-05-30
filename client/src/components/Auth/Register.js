@@ -62,6 +62,7 @@ function Body() {
 
     return (
         <div className="my-register-form">
+            <h1 className="text-center">Register</h1>
             <form>
                 {/* Email input */}
                 <div className="form-outline mb-4">

@@ -4,5 +4,12 @@ import { Navigate } from 'react-router-dom';
 export default function PrivateRoute({ children, ...rest }) {
     const auth = localStorage.getItem('email');
 
-    return auth ? <>{children}</> : <Navigate to="/login" />;
+   if(!auth) {
+    alert("You must be logged in to view this page.");
+   return <Navigate to="/login" />;}
+
+    else{
+    return <>{children}</> 
+}
+
 }
