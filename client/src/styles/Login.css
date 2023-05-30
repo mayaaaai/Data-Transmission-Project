@@ -4,19 +4,22 @@
     padding: 20px;
     background-color: #f8f9fa;
     border-radius: 8px;
-    color: #000; /* Set text color to black */
-    text-align: center; /* Center align the form */
-    margin-top: 200px;
-  }
-  
-  /* Form styles */
-  .my-login-form form {
+    color: #000;
+    /* Set text color to black */
+    text-align: center;
+    /* Center align the form */
+    margin-top: 250px;
+}
+
+/* Form styles */
+.my-login-form form {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center align the form elements */
-  }
-  
-  .my-login-form .form-outline {
+    align-items: center;
+    /* Center align the form elements */
+}
+
+.my-login-form .form-outline {
     position: relative;
     margin-bottom: 20px;
-  }
+}

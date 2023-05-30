@@ -2,76 +2,76 @@
 
 /* Container styles */
 .my-register-form {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  margin-top: 200px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-top: 200px;
 }
 
 /* Form styles */
 .my-register-form form {
-  display: flex;
-  flex-direction: column;
-  
+    display: flex;
+    flex-direction: column;
+
 }
 
 .my-register-form .form-outline {
-  position: relative;
-  margin-bottom: 200px;
+    position: relative;
+    margin-bottom: 200px;
 }
 
 .my-register-form .form-control {
-  font-size: 16px;
-  padding: 12px 15px 12px 15px;
-  border: none;
-  border-radius: 5px;
-  background-color: #e9ecef;
-  color: #212529;
-  outline: none;
+    font-size: 16px;
+    padding: 12px 15px 12px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e9ecef;
+    color: #212529;
+    outline: none;
 }
 
 .my-register-form .form-label {
-  position: absolute;
-  top: 12px;
-  left: 15px;
-  color: #6c757d;
-  pointer-events: none;
-  transition: all 0.2s;
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    color: #6c757d;
+    pointer-events: none;
+    transition: all 0.2s;
 }
 
-.my-register-form .form-control:focus + .form-label,
-.my-register-form .form-control:not(:placeholder-shown) + .form-label {
-  top: -10px;
-  left: 10px;
-  font-size: 12px;
-  background-color: #f8f9fa;
-  padding: 0 5px;
+.my-register-form .form-control:focus+.form-label,
+.my-register-form .form-control:not(:placeholder-shown)+.form-label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    background-color: #f8f9fa;
+    padding: 0 5px;
 }
 
 /* Submit button styles */
 .my-register-form .btn-primary {
-  font-size: 16px;
-  padding: 12px 15px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: 0000;
-  cursor: pointer;
-  transition: background-color 0.2s;
+    font-size: 16px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: 0000;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 .my-register-form .btn-primary:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
 /* Login link styles */
 .my-register-form .text-center a {
-  color: #007bff;
-  text-decoration: none;
+    color: #007bff;
+    text-decoration: none;
 }
 
 .my-register-form .text-center a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }

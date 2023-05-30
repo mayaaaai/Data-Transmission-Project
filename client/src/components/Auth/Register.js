@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import '../../styles/Register.css';
+import Navbar from "../Layout/Navbar";
 
 
 
@@ -34,7 +35,7 @@ function Body() {
             homeAddress: homeAddress,
             cardNumber: cardNumber
         }
-        const response = await fetch("http://localhost:5050/register", {
+        const response = await fetch("http://localhost:5050/record/register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -47,11 +48,15 @@ function Body() {
             });
 
         const message = await response.text();
-        console.log(message);
-        if (message === "Registration successful") {
-            window.alert("Registration successful");
-        } else {
-            window.alert("Registration failed");
+
+        if (message === "Account already exists") {
+            window.alert("Account already exists");
+            window.location.href = "/login";
+        }
+        else {
+            window.alert("Account created!");
+            localStorage.setItem("email", email);
+            window.location.href = "/menu";
         }
     }
 
@@ -109,9 +114,8 @@ function Body() {
 function Register() {
     return (
         <>
-           
+            <Navbar />
             <Body />
-             
         </>
     );
 }

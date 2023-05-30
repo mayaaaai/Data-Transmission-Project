@@ -1,6 +1,43 @@
-function Navbar() {
+function LoginRegister() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <><ul className="navbar-nav">
+            <li className="nav-item">
+                <a className="nav-link active" href="/login">
+                    Login
+                </a>
+            </li>
+            <li className="nav-item">
+                <a className="nav-link active" href="/register">
+                    Register
+                </a>
+            </li>
+        </ul></>
+    )
+}
+
+
+function Logout() {
+
+    function handleClick(e) {
+        e.preventDefault();
+        localStorage.removeItem("email");
+        window.location.reload();
+    }
+
+    return (
+        <><ul className="navbar-nav">
+            <li className="nav-item">
+                <a className="nav-link active" href="/menu" onClick={handleClick}>
+                    Logout
+                </a>
+            </li>
+        </ul> </>
+    )
+
+}
+function NavBarBody({ children }) {
+    return (
+        <><nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">
                 <a className="navbar-brand" href="/">
                     Zoom's FineDine
@@ -28,24 +65,40 @@ function Navbar() {
                                 Cart
                             </a>
                         </li>
-                        </ul>
-                        <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <a className="nav-link active"  href="/login">
-                                Login
-                            </a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link active"  href="/register">
-                                Register
-                            </a>
-                        </li>
                     </ul>
-                 
+                    {children}
+
                 </div>
             </div>
         </nav>
-    );
+        </>
+    )
+}
+
+
+
+function Navbar() {
+
+    if (localStorage.getItem("email") === null) {
+
+        return (
+            <NavBarBody>
+                <LoginRegister />
+            </NavBarBody>
+
+        )
+
+    }
+    else {
+        return (
+            <NavBarBody>
+                <Logout />
+            </NavBarBody>
+
+        )
+    }
+
+
 }
 
 export default Navbar;

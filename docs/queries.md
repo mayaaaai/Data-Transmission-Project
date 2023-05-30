@@ -46,7 +46,7 @@ db.getCollection("food").insertMany([
     price: 12.99
   },
   {
-    title: "Penne al Forno",
+    title: "Penne al Zumi",
     description: "A comforting pasta for those lazy days",
     ingredients: [
       "tomato sauce",
@@ -58,7 +58,7 @@ db.getCollection("food").insertMany([
     price: 9.99
   },
   {
-    title: "Onion Soup",
+    title: "Zamă de zumi",
     description: "'Oui, oui!' said the french onion soup",
     ingredients: [
       "onion",
@@ -130,11 +130,54 @@ db.getCollection("food").insertMany([
     price: 6.99
   }
 ]);
+```
 
-db.createCollection("users");
-db.users.insertMany([
-  { email: "user1@example.com", password: "password1", homeAddress: "Address 1", cardNumber: "1111-2222-3333-4444" },
-  { email: "user2@example.com", password: "password2", homeAddress: "Address 2", cardNumber: "5555-6666-7777-8888" },
-  { email: "user3@example.com", password: "password3", homeAddress: "Address 3", cardNumber: "9999-0000-1111-2222" }
+## Users collection
+
+```js
+db.getCollection("users").drop(); // asa dam drop unei colectii
+db.getCollection("users").insertMany([
+  {
+    email: "test@test.com",
+    password: "1234",
+    homeAddress : "Address 0",
+    cardNumber : "1111-2222-3333-4444"
+
+  },
+  {
+      email : "user1@example.com",
+      password : "password1",
+      homeAddress : "Address 1",
+      cardNumber : "1111-2222-3333-4444"
+  },
+  {
+      email : "user2@example.com",
+      password : "password2",
+      homeAddress : "Address 2",
+      cardNumber : "5555-6666-7777-8888"
+  },
+  {
+      email : "user3@example.com",
+      password : "password3",
+      homeAddress : "Address 3",
+      cardNumber : "9999-0000-1111-2222"
+  }
+]);
+```
+
+## Cart collection
+
+We want the cart collection to contain info as so:
+
+- email: the email of the user that owns the cart
+- item_id: the id of the item that is in the cart
+
+```js
+db.getCollection("cart").drop(); // asa dam drop unei colectii
+db.getCollection("cart").insertMany([
+  {
+    email: "test@test.com",
+    item: "647106ec2cd305d672aad1a9"
+  },
 ]);
 ```

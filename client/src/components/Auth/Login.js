@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import '../../styles/Login.css';
-
+import Navbar from "../Layout/Navbar";
 
 
 function Body() {
@@ -22,7 +22,7 @@ function Body() {
             email: email,
             password: password
         }
-        const response = await fetch("http://localhost:5050/login", {
+        const response = await fetch("http://localhost:5050/record/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -35,13 +35,14 @@ function Body() {
             });
 
         const message = await response.text();
-        console.log(message)
-        if (message.status === 200) {
-            console.log(message);
-            if (message === "Invalid email or password")
-                window.alert("Invalid email or password");
-            else
-                window.alert("Login successful");
+
+
+        if (message === "Invalid email or password")
+            window.alert("Invalid email or password");
+        else {
+            // window.alert("Login successful");
+            localStorage.setItem("email", email);
+            window.location.href = "/menu";
         }
     }
 
@@ -89,9 +90,8 @@ function Body() {
 function Home() {
     return (
         <>
-             
+            <Navbar />
             <Body />
-            
         </>
     );
 }

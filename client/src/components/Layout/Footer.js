@@ -7,8 +7,8 @@ function Footer() {
                     style={{ backgroundColor: "rgba(0, 0, 0, 0.8)" }}
                 >
                     © 2023 Copyright:&nbsp;
-                    <a className="text-light" href="https://github.com/mayaaaai/Data-Transmission-Project" target="_blank">
-                        Echipa Zoom-Zoom
+                    <a className="text-light" href="https://store.steampowered.com/app/3330/Zuma_Deluxe/">
+                        Echipa Zoom Zoom
                     </a>
                 </div>
             </footer>

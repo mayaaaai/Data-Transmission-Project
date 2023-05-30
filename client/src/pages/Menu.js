@@ -11,7 +11,11 @@ function Card({ image, title, description, ingredients = [], price }) {
 		e.preventDefault();
 
 		// When a post request is sent to the create url, we'll add a new record to the database.
-		const newCartItem = { title };
+		const newCartItem = {
+			title: title,
+			email: localStorage.getItem("email")
+		};
+		console.log(newCartItem);
 		const response = await fetch("http://localhost:5050/record", {
 			method: "POST",
 			headers: {
