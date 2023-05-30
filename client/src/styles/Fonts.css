@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'akaDora';
+    src: local('akaDora'),
+        url('../fonts/akaDora.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'BackToBlack';
+    src: local('BackToBlack'),
+        url('../fonts/BackToBlack.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Creattion';
+    src: local('Creattion'),
+        url('../fonts/Creattion.otf') format("opentype");
+}
+
+@font-face {
+    font-family: 'Gaby';
+    src: local('Gaby'),
+        url('../fonts/Gaby.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: 'Handycheera';
+    src: local('Handycheera'),
+        url('../fonts/Handycheera.otf') format("opentype");
+}

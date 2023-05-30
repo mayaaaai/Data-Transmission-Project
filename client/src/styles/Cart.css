@@ -1,0 +1,47 @@
+html,
+body {
+    background-color: #e6e6e6;
+}
+
+.container {
+    height: 100vh;
+
+    /* center the content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* contains the cards */
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.th-text {
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: white;
+}
+
+.td-text {
+    font-size: 1vw;
+    font-weight: bold;
+    color: rgb(188, 188, 188);
+}
+
+.table {
+    backdrop-filter: brightness(60%) blur(20px);
+}
+
+.card-img-top {
+    width: 40%;
+    height: 5vw;
+    object-fit: cover;
+
+    /* rounded corners */
+    border-radius: 10px;
+    margin-top: 10px;
+}

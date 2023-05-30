@@ -1,0 +1,48 @@
+html,
+body {
+    background-color: #e6e6e6;
+    background-image: url(../images/background.jpg);
+}
+
+/* the menu */
+.box {
+    padding: 10px;
+}
+
+/* contains the rows */
+.mycontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* contains the cards */
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.card {
+    filter: drop-shadow(0 0 0.75rem rgb(131, 48, 20));
+}
+
+.card-img-top {
+    width: auto;
+    height: 10vw;
+    object-fit: cover;
+
+    /* rounded corners */
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.card-buttons {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
