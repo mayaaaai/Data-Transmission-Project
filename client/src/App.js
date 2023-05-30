@@ -5,14 +5,16 @@ import PrivateRoute from './routes/PrivateRoute';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import Cart from './pages/Cart';
+import Login from './components/Auth/Login';
 
 function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={ <Home /> } />
-        <Route path="/menu" element={ <Menu /> } />
-        <Route path="/cart" element={ <Cart /> } />
+        <Route path="/" element={<PublicRoute> <Home /> </PublicRoute>} />
+        <Route path="/menu" element={<PublicRoute> <Menu /> </PublicRoute>} />
+        <Route path="/cart" element={<PrivateRoute> <Cart /> </PrivateRoute>} />
+        <Route path="../login" element={<PublicRoute> <Login /> </PublicRoute>} />
       </Routes>
     </>
   );

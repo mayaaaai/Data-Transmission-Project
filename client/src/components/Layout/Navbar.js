@@ -31,12 +31,12 @@ function Navbar() {
                         </ul>
                         <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/login">
+                            <a className="nav-link active"  href="/login">
                                 Login
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/rgister">
+                            <a className="nav-link active"  href="/rgister">
                                 Register
                             </a>
                         </li>

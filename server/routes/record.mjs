@@ -4,6 +4,23 @@ import { ObjectId } from "mongodb";
 
 const router = express.Router();
 
+
+router.post("/login", async (req, res) => {
+    console.log(req.body);
+    let collection = await db.collection("users");
+    let query = { email: req.body.email, password: req.body.password };
+    let newDoc = await collection.findOne(query);
+
+    if (!newDoc) {
+        console.log("❌ Invalid email or password");
+        res.send("Invalid email or password").status(404);
+    }
+    else {
+        console.log("✅ Login successful");
+        res.send("Login successful").status(200);
+    }
+})
+
 // This section will help you get a list of all the food.
 router.get("/", async (req, res) => {
     let collectionName = req.query.collectionName;
