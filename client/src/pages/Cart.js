@@ -2,7 +2,12 @@ import Layout from '../components/Layout/Layout';
 import React, { useEffect, useState } from "react";
 import '../styles/Cart.css';
 
+let totalprice = 0;
+
 function Body({ items = [] }) {
+
+
+
   async function deleteRecord(e) {
     const item = e.target.id;
     const email = localStorage.getItem("email");
@@ -31,7 +36,17 @@ function Body({ items = [] }) {
     window.location.reload();
   }
 
-  
+  function calculateTotalPrice() {
+    let totalprice = 0;
+    items.forEach((item) => {
+      totalprice += item.price * item.quantity;
+    });
+
+    return totalprice;
+  }
+
+  totalprice = calculateTotalPrice();
+
   return (
     <div className="container">
       <table className="table">
@@ -59,6 +74,7 @@ function Body({ items = [] }) {
           ))}
         </tbody>
       </table>
+      <h2 className="total-price text-white">Total Price: ${totalprice}</h2>
       <button className="btn btn-primary" onClick={completeOrder}>Complete Order</button>
     </div>
   );

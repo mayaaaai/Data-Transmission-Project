@@ -46,7 +46,7 @@ db.getCollection("food").insertMany([
     price: 12.99
   },
   {
-    title: "Penne al Zumi",
+    title: "Penne al Forno",
     description: "A comforting pasta for those lazy days",
     ingredients: [
       "tomato sauce",
@@ -58,7 +58,7 @@ db.getCollection("food").insertMany([
     price: 9.99
   },
   {
-    title: "Zamă de zumi",
+    title: "Onion Soup",
     description: "'Oui, oui!' said the french onion soup",
     ingredients: [
       "onion",
@@ -70,7 +70,7 @@ db.getCollection("food").insertMany([
     price: 6.99
   },
   {
-    title: "Crispi Strips with Fries",
+    title: "Crispy Strips with Fries",
     description: "Delicious strips with fries and ketchup, crispy and tasty",
     ingredients: [
       "chicken",
